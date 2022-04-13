@@ -1,0 +1,22 @@
+# ===============================================================
+# |  Configuration file for Accelerator Template-driven pipeline.  |
+# ===============================================================
+
+# See https://confluence.agile.bns/x/mTbVCw for generally supported properties,
+# and https://confluence.agile.bns/x/9_J-Bg for template-specific properties.
+
+#  -------------------------
+# |  Build configuration.  |
+# --------------------------
+build:
+  ## See https://bitbucket.agile.bns/projects/ACCP/repos/container-orchestrator/browse/src/main/resources/templates/java-gradle/generic.yml
+  ## for the list of steps defined for this template.
+  template: 'java-gradle:generic'
+
+  ## Customizations to override the default behaviours defined in the template.
+  substitutions:
+    _VERSION_STRATEGY: MANUAL
+    ## Options to enable/disable Sonarqube, Fortify, Blackduck scans.
+    #_SONAR_SCAN_STRATEGY: DEFAULT/SKIP/RUN_NOT_FAIL
+    #_FORTIFY_SCAN_STRATEGY: DEFAULT/SKIP/RUN_NOT_FAIL
+    #_BLACKDUCK_SCAN_STRATEGY: FAIL_ON_RISKS/SKIP/TRIGGER_ONLY
